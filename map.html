@@ -81,20 +81,19 @@
 					//=================Countries=================
 					//===========================================
           				
-					bclas = L.geoJson(country2, {
-					style: countryclassic	
+					e = L.geoJson(explshp	
 						})  
 				
-					b3128 = L.geoJson(country2, {
-					style: countrystyle3128
-						})
+					//b3128 = L.geoJson(country2, {
+					//style: countrystyle3128
+					//	})
 				
 
-					g = L.geoJson(Mount, {
-					style: Mountsty}),
+					//g = L.geoJson(Mount, {
+					//style: Mountsty}),
 						
-					g2 = L.geoJson(Mount, {
-					style: Mountsty2})
+					//g2 = L.geoJson(Mount, {
+					//style: Mountsty2})
 						
 					
 	//===============================Layer Groups=======================================
@@ -105,20 +104,7 @@
 				
 					//=================background=================
 				var aShp = L.layerGroup([a2]),
-					a1Shp = L.layerGroup([a1]),
-					//=================country=================
-				    	b3128Shp = L.layerGroup([b3128]),
-					b1Shp = L.layerGroup([b1]),
-				    	b2Shp = L.layerGroup([b2]),
-
-				    
-				    	cdisShp = L.layerGroup([cdis]),
-				    	cdis1Shp = L.layerGroup([cdis1]),
-				    	cdis2Shp = L.layerGroup([cdis2]),
-				    	cdis3Shp = L.layerGroup([cdis3]),
-				    	cdisg1Shp = L.layerGroup([cdisg1]),
-				    	cdisg2Shp = L.layerGroup([cdisg2]),
-					eShp = L.layerGroup([e]);			
+					eShp = L.layerGroup([a1]);		
 			
 				
 	//this is a seperating line ----------------------------------------------------------------------------------
@@ -138,38 +124,12 @@
 							layers    : {
 								"Water Background": aShp,
 								"Black Background": a1Shp,
-								"Grey 1 B.G.": cdis1Shp,
-								"Grey 2 B.G.": cdis3Shp,
-								"Black B.G.": cdis2Shp,
-								"Green 1 B.G.": cdisg1Shp,
-								"Green 2 B.G.": cdisg2Shp
+								"Grey 1 B.G.": eShp
 							}
 						}, {
 							groupName : "0-5k",
 							layers    : {
-								"Country (pre-3000)":bclasShp,
-								"Country (3128)":b3128Shp,
-								"Country (3600)":b3600Shp,
-								"Country (3650)":b3650Shp,
-								"Country (3700)":b3700Shp,
-								"Country (3750)":b3750Shp,
-								"Country (3800)":b3800Shp,
-								"Country (3830)":b3830Shp,
-								"Country (3905)":b3905Shp,
-								"Country (3915)":b3915Shp,
-								"Country (3940)":b3940Shp,
-								"Country (4000)":b4000Shp,
-								"Country (4020)":b4020Shp,
-								"Country (4030)":b4030Shp,
-								"Country (4045)":b4045Shp,
-								"Country (4065)":b4065Shp,
-								"Country (4075)":b4075Shp,
-								"Country (4080)":b4080Shp,
-								"Country (4110)":b4110Shp,
-								"Country (4500)":b4500Shp,
-								"Country (4700)":b4700Shp,
-								"Country (4875)":b4875Shp,
-								"Country (4940)":b4940Shp
+								"Country (pre-3000)":eShp
 							}
 						}						
 				];	
@@ -180,10 +140,7 @@
 							groupName : "Rivers",
 							expanded  : true,
 							layers    : { 
-								"Medium River":cShp,					
-								"River":eShp,
-								"Lake":dShp,
-								"Mountain Opaque":g2Shp
+								"Medium River":eShp
 							}	
 						 }						 
 				];
