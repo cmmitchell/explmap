@@ -24,7 +24,7 @@ var baseshp =
 ]
 }
 
-function polyp(feature) {
+function polshp(feature) {
     return {
         fillColor: "#58c712",
         weight: 2,
