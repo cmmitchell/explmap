@@ -34,6 +34,7 @@
 		<script type="text/javascript" src="https://cmmitchell.github.io/Webmap2/Java/gjson/Background.js"></script>
 		
 		<script type="text/javascript" src="https://cmmitchell.github.io/explmap/expl/Shapes/baseshp.js"></script>
+		<script type="text/javascript" src="https://cmmitchell.github.io/explmap/expl/Shapes/rivers.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/explmap/expl/Pictures/EastCont1.png"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/explmap/expl/Pictures/WEST1.tif"></script>
 		<!-- Broken Stuff -->
@@ -94,6 +95,12 @@
 						
 					//g2 = L.geoJson(Mount, {
 					//style: Mountsty2})
+				
+					//GEO FEATURES
+				
+					r = L.geoJson(river, {
+					style: rivc
+						})
 						
 					
 	//===============================Layer Groups=======================================
@@ -106,7 +113,9 @@
 				var aShp = L.layerGroup([a2]),
 					eShp = L.layerGroup([e]),
 				    	e2Shp = L.layerGroup([e]),
-				    	e3Shp = L.layerGroup([e]);		
+				    	e3Shp = L.layerGroup([e]),
+				    
+				    	rShp = L.layerGroup([r]);
 			
 				var imageUrl = 'https://cmmitchell.github.io/explmap/expl/Pictures/EastCont1.png',
     				imageBounds = [[71.8422299291659812,-45.1706077199116294], [-71.0585338645851579,112.1506196698197186]];
@@ -141,6 +150,7 @@
 							expanded  : true,
 							layers    : { 
 								"Sketches": eShp,
+								"Rivers": rShp,
 								"Image": mpImage
 							}	
 						 }						 
